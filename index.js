@@ -6,11 +6,13 @@ const server = createServer(app);
 const { connectDB } = require("./src/config/database");
 const { ENV } = require("./src/config/env");
 const port = ENV.API_PORT;
+const router = require("./src/apiRoutes/routes/routes")
 
 
 app.use(bodyParser.json());
 
 
+app.use('/', router);
 
 
 

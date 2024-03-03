@@ -22,9 +22,16 @@ const tradeSchema = new mongoose.Schema({
     quantity: {
         type: Number,
         required: true
+    },
+    tradeSuccess : {
+        type: Boolean
+    },
+    isDeleted : {
+        type : Boolean, 
+        defalut: false 
     }
 });
 
 const Trade = mongoose.model('Trade', tradeSchema);
 
-module.exports = Trade;
+module.exports = { Trade };

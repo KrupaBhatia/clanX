@@ -6,7 +6,11 @@ const portfolioSchema = new mongoose.Schema({
         ref: 'Stock',
         required: true
     },
-    quantity: {
+    symbol: {
+        type: String,
+        required: true
+    },
+    totalQuantity: {
         type: Number,
         required: true
     },
@@ -18,4 +22,4 @@ const portfolioSchema = new mongoose.Schema({
 
 const Portfolio = mongoose.model('Portfolio', portfolioSchema);
 
-module.exports = Portfolio;
+module.exports = {Portfolio};
